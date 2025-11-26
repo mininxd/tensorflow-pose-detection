@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pose Detection with Vite</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f0f0f0;
+    }
+    #container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #video, #output {
+      width: 640px;
+      height: 480px;
+      margin: 10px;
+      border: 1px solid #ccc;
+    }
+    #output {
+      background: black;
+    }
+    .controls {
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>Pose Detection - Vite Demo</h1>
+    <div class="controls">
+      <button id="startBtn">Start Camera</button>
+      <button id="stopBtn">Stop Camera</button>
+    </div>
+    <video id="video" autoplay playsinline style="display:none;"></video>
+    <canvas id="output"></canvas>
+    <div id="status">Ready to start pose detection</div>
+  </div>
+  <script type="module" src="/src/demo.ts"></script>
+</body>
+</html>
